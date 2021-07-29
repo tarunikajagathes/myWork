@@ -1,0 +1,14 @@
+<h2>Routed to Login form</h2>
+<h3 i18n>Login Form</h3>
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <label class="name"i18n="name@@loginName">Name:</label><br>
+    <input type="text" placeholder="Enter the name" name="name" formControlName="name" class="form-control"><br>
+    <small *ngIf="loginForm.controls.name.invalid && loginForm.controls.name.touched">Please enter the name with minimum of 3 letters</small><br>
+    <label i18n>Email:</label><br>
+    <input type="email" placeholder="Enter the email" name="email" formControlName="email" class="form-control"><br>
+    <small *ngIf="loginForm.controls.email.invalid && loginForm.controls.email.touched">Please enter the email with proper format</small><br>
+    <label i18n>Password:</label><br>
+    <input type="password" placeholder="Enter the password" name="password" formControlName="password" class="form-control"><br>
+    <small *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched">Password is required</small><br>
+    <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+</form>

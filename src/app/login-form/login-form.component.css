@@ -1,0 +1,17 @@
+small{
+    color: red;
+}
+.form-control.ng-touched.ng-valid{
+    border:1px solid green;
+    box-shadow: 1px 1px 1px 1px green;
+}
+.form-control.ng-touched.ng-invalid{
+    border:1px solid red;
+    box-shadow: 1px 1px 1px 1px red;
+}
+.form-control{
+    padding: 5px;
+}
+button{
+    padding: 5px;
+}
