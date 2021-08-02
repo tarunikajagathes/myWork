@@ -7,7 +7,8 @@ import { UnsavedchangesGuard } from './unsavedchanges.guard';
 
 const routes: Routes = [
   {path: 'login-form',component: LoginFormComponent, canDeactivate:[ UnsavedchangesGuard]},
- {path:'payment', component:PaymentComponent,canActivate:[AuthGuard]}
+ {path:'payment', component:PaymentComponent,canActivate:[AuthGuard]},
+ {path:'product',loadChildren:()=>import('./product/product.module').then(m=>m.ProductModule)}
 ];
 
 @NgModule({

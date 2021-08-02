@@ -20,7 +20,7 @@ import { AuthGuard } from './auth.guard';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [ UnsavedchangesGuard, AuthGuard],
   bootstrap: [AppComponent]
