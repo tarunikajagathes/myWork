@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { UnsavedchangesGuard } from './unsavedchanges.guard';
+import { PaymentComponent } from './payment/payment.component';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
+    PaymentComponent,
     
   ],
   imports: [
@@ -19,7 +22,7 @@ import { UnsavedchangesGuard } from './unsavedchanges.guard';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ UnsavedchangesGuard],
+  providers: [ UnsavedchangesGuard, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
